@@ -3,7 +3,7 @@
 cd "$(dirname "$0")"
 
 # Remove old certs
-rm -r {certs,pem,text}/* eid-lv-*.{crt,pem}
+rm {certs,source}/* eid-lv-*.crt
 
 # Download all CA certs
 OLDIFS=$IFS
@@ -11,41 +11,36 @@ IFS=","
 while read name url
 do
 	echo "Downloading $name at $url"
-	curl -s "$url" > "certs/$name.crt"
+	curl -s "$url" > "source/$name.crt"
 done < ca-urls.csv
 IFS=$OLDIFS
 
 # Convert each cert into standard PEM format
-for f in certs/*.crt
+for f in source/*.crt
 do
 	filename=$(basename $f)
+	basename=$(basename $f .crt)
 
 	# Convert all certs to PEM
-	if openssl x509 -inform der -in $f -out pem/$(basename $f .crt).pem &> /dev/null ; then
+	if openssl x509 -inform der -in "$f" -out "certs/$basename.pem" &> /dev/null ; then
 		echo "$filename converted to PEM"
 	else
-		cp $f pem/$(basename $f .crt).pem
+		cp "$f" "certs/$basename.pem"
 		echo "$filename already in PEM"
 	fi
 
 	# Extract and store cert in text form
-	openssl x509 -in pem/$(basename $f .crt).pem -text -noout > text/$(basename $f .crt).txt
+	openssl x509 -in "certs/$basename.pem" -text -noout > "certs/text/$basename.txt"
 done
 
 # Generate a combined CA for use in web servers
-cat pem/ca* pem/policy.pem pem/root.pem > eid-lv-server.pem
+cat certs/ca*.pem certs/policy.pem certs/root.pem > eid-lv-server.crt
 
 # Generate a combined cert for client auth
-cat pem/ca* > eid-lv-client.pem
+cat certs/ca*.pem > eid-lv-client.crt
 
 # Generate a combined root and policy cert
-cat pem/policy.pem pem/root.pem > eid-lv-root.pem
-
-# Generate copies with a CRT extension
-for pem in eid-lv-*.pem
-do
-	cp $pem $(basename $pem .pem).crt
-done
+cat certs/policy.pem certs/root.pem > eid-lv-root.crt
 
 echo
 echo "Completed!"
