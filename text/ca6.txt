@@ -3,7 +3,7 @@ Certificate:
         Version: 3 (0x2)
         Serial Number:
             36:18:2d:91:00:00:00:00:00:24
-    Signature Algorithm: sha1WithRSAEncryption
+        Signature Algorithm: sha1WithRSAEncryption
         Issuer: C=LV, OU=Sertifikacijas pakalpojumu dala, CN=E-ME PSI (PCA)
         Validity
             Not Before: Feb 21 01:15:24 2015 GMT
@@ -11,8 +11,8 @@ Certificate:
         Subject: C=LV, OU=Sertifikacijas pakalpojumu dala, CN=E-ME SI (CA1)
         Subject Public Key Info:
             Public Key Algorithm: rsaEncryption
-                Public-Key: (2048 bit)
-                Modulus:
+            RSA Public Key: (2048 bit)
+                Modulus (2048 bit):
                     00:9d:6b:9e:aa:9f:c8:7c:6b:a4:d9:b0:94:48:53:
                     51:dd:c8:39:91:d3:7a:af:98:65:a4:aa:b2:59:d1:
                     d6:93:1a:a2:99:96:9e:ba:85:f2:52:4d:c2:5e:cd:
@@ -57,10 +57,8 @@ Certificate:
                 keyid:CE:0E:D9:97:07:9D:F5:75:F7:AF:C6:11:DF:9C:73:4E:10:1D:41:0B
 
             X509v3 CRL Distribution Points: 
-
-                Full Name:
-                  URI:http://www.eme.lv/cdp/E-ME%20PSI%20(PCA).crl
-                  URI:ldap://eme.lv/cn=E-ME%20PSI%20(PCA),OU=Sertifikacijas%20pakalpojumu%20dala,O=E-ME,C=lv?certificaterevocationlist?base?objectclass=certificationauthority
+                URI:http://www.eme.lv/cdp/E-ME%20PSI%20(PCA).crl
+                URI:ldap://eme.lv/cn=E-ME%20PSI%20(PCA),OU=Sertifikacijas%20pakalpojumu%20dala,O=E-ME,C=lv?certificaterevocationlist?base?objectclass=certificationauthority
 
             Authority Information Access: 
                 CA Issuers - URI:http://www.eme.lv/aia/E-ME%20PSI%20(PCA).crt
@@ -68,18 +66,18 @@ Certificate:
                 CA Issuers - URI:ldap://eme.lv/CN=E-ME%20PSI%20(PCA),OU=sertifikacijas%20pakalpojumu%20dala,O=E-ME,C=lv?cacertificate?base?objectclass=certificationauthority
 
     Signature Algorithm: sha1WithRSAEncryption
-         a6:0e:14:63:46:c8:4c:00:75:6a:c4:9b:6d:12:64:d3:30:74:
-         9a:75:d6:e3:9f:28:1c:9b:98:4c:45:2e:17:f9:0c:f1:97:9f:
-         28:a0:5f:3c:44:16:a1:1d:c0:cb:b4:de:21:3f:37:45:cc:76:
-         5d:f8:7b:ab:22:01:32:9a:df:47:83:6c:90:60:78:73:ec:b8:
-         dc:08:8d:45:73:27:b5:b7:55:c3:70:5f:73:2b:d4:34:2a:55:
-         f9:24:1e:c3:e7:92:72:4b:f7:7e:f0:0e:5a:96:ae:f6:a1:a5:
-         df:b8:b8:b9:68:d0:4d:87:b9:6d:49:29:ef:9e:0a:4c:68:75:
-         a4:c5:b7:79:20:51:45:9e:7e:d9:bb:0f:f0:08:4c:df:42:c1:
-         fa:33:fd:7b:2a:e7:15:35:c3:ac:f1:26:42:83:a7:89:40:46:
-         e9:f7:b8:1e:2e:a1:72:fa:fe:3a:f2:14:44:f4:b4:7f:ab:04:
-         68:21:6a:9a:7c:e5:54:58:ae:16:9e:ba:cf:f4:25:c8:a1:58:
-         b7:f9:df:1a:0a:07:9c:43:f2:54:bf:1e:43:6b:a9:54:94:35:
-         1f:d5:d6:bc:90:53:1a:5c:9e:1c:2b:0e:57:f1:69:04:3c:1f:
-         19:d3:d6:8d:3b:21:39:4d:22:ce:69:0f:d7:97:f7:a4:4d:91:
-         0c:8d:02:ae
+        a6:0e:14:63:46:c8:4c:00:75:6a:c4:9b:6d:12:64:d3:30:74:
+        9a:75:d6:e3:9f:28:1c:9b:98:4c:45:2e:17:f9:0c:f1:97:9f:
+        28:a0:5f:3c:44:16:a1:1d:c0:cb:b4:de:21:3f:37:45:cc:76:
+        5d:f8:7b:ab:22:01:32:9a:df:47:83:6c:90:60:78:73:ec:b8:
+        dc:08:8d:45:73:27:b5:b7:55:c3:70:5f:73:2b:d4:34:2a:55:
+        f9:24:1e:c3:e7:92:72:4b:f7:7e:f0:0e:5a:96:ae:f6:a1:a5:
+        df:b8:b8:b9:68:d0:4d:87:b9:6d:49:29:ef:9e:0a:4c:68:75:
+        a4:c5:b7:79:20:51:45:9e:7e:d9:bb:0f:f0:08:4c:df:42:c1:
+        fa:33:fd:7b:2a:e7:15:35:c3:ac:f1:26:42:83:a7:89:40:46:
+        e9:f7:b8:1e:2e:a1:72:fa:fe:3a:f2:14:44:f4:b4:7f:ab:04:
+        68:21:6a:9a:7c:e5:54:58:ae:16:9e:ba:cf:f4:25:c8:a1:58:
+        b7:f9:df:1a:0a:07:9c:43:f2:54:bf:1e:43:6b:a9:54:94:35:
+        1f:d5:d6:bc:90:53:1a:5c:9e:1c:2b:0e:57:f1:69:04:3c:1f:
+        19:d3:d6:8d:3b:21:39:4d:22:ce:69:0f:d7:97:f7:a4:4d:91:
+        0c:8d:02:ae
