@@ -33,19 +33,13 @@ do
 done
 
 # Generate a combined CA for use in web servers
-cat pem/ca* pem/policy.pem pem/root.pem > eid-lv-server.pem
+cat pem/ca* pem/policy.pem pem/root.pem > eid-lv-server.{pem,crt}
 
 # Generate a combined cert for client auth
-cat pem/ca* > eid-lv-client.pem
+cat pem/ca* > eid-lv-client.{pem,crt}
 
 # Generate a combined root and policy cert
-cat pem/policy.pem pem/root.pem > eid-lv-root.pem
-
-# Generate copies with a CRT extension
-for pem in eid-lv-*.pem
-do
-	cp $pem $(basename $pem .pem).crt
-done
+cat pem/policy.pem pem/root.pem > eid-lv-root.{pem,crt}
 
 echo
 echo "Completed!"
