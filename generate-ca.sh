@@ -2,6 +2,9 @@
 
 cd "$(dirname "$0")"
 
+# Remove old certs
+rm -r {certs,pem,text}/* eid-lv-*.{crt,pem}
+
 # Download all CA certs
 OLDIFS=$IFS
 IFS=","
