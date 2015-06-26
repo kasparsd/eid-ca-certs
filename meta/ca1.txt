@@ -1,0 +1,83 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            11:f0:b3:6a:e2:08:11:74:00:00:00:00:00:03
+    Signature Algorithm: sha1WithRSAEncryption
+        Issuer: C=LV, OU=Sertifikacijas pakalpojumu dala, CN=E-ME PSI (PCA)
+        Validity
+            Not Before: May 20 07:37:01 2009 GMT
+            Not After : May 20 07:37:01 2015 GMT
+        Subject: C=LV, OU=Sertifikacijas pakalpojumu dala, CN=E-ME SI (CA1)
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:e2:19:dd:13:7b:12:f4:fb:45:91:80:ff:61:8b:
+                    a0:63:34:75:af:69:d5:aa:96:8b:b3:7b:b9:af:8a:
+                    9a:5b:1a:16:b1:48:45:f6:cb:da:77:c0:2c:48:71:
+                    9b:af:76:13:1d:a3:29:09:00:08:b3:6d:4e:9c:68:
+                    3b:a6:9a:ad:d7:ae:92:ab:af:2a:67:e7:03:60:cf:
+                    bf:40:d4:02:86:22:a2:e7:df:7a:dd:4e:3f:78:86:
+                    3c:6b:f9:28:d7:0f:e3:3b:64:66:27:c0:85:4f:2f:
+                    c2:88:71:64:fb:5d:c3:05:79:41:37:c8:1f:11:9d:
+                    7c:7d:7d:9d:99:5b:2c:63:07:11:3f:e1:41:e6:ff:
+                    69:eb:39:b1:84:d9:72:98:28:04:37:f6:d6:bc:7d:
+                    40:57:d1:c5:b5:05:06:b9:50:39:fa:aa:6d:d6:0b:
+                    bf:b4:da:1c:3f:e2:56:b8:6f:30:ed:37:99:33:7a:
+                    e4:7d:23:87:12:b6:0b:43:9d:d9:b4:c7:19:d9:35:
+                    57:06:4c:b3:cb:c7:21:25:d0:4a:c4:36:71:57:41:
+                    2a:3d:c0:f7:c7:a7:6d:28:aa:3d:86:b7:2d:30:3e:
+                    93:30:5d:bd:3f:41:24:41:c2:a3:c4:6d:e7:b2:b0:
+                    14:2b:00:fe:71:ee:d0:c5:bd:40:08:8f:96:62:2c:
+                    32:e3
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: critical
+                CA:TRUE
+            X509v3 Subject Key Identifier: 
+                47:55:F4:92:16:10:EB:03:95:19:E8:EB:6C:BA:C8:28:A6:92:94:42
+            X509v3 Key Usage: critical
+                Certificate Sign, CRL Sign
+            qcStatements: 
+                0
+0......F..
+            1.3.6.1.4.1.311.21.1: 
+                ...
+            X509v3 Certificate Policies: 
+                Policy: 1.3.6.1.4.1.32061.1.1.1
+                  CPS: http://www.eme.lv/repository
+
+            1.3.6.1.4.1.311.20.2: 
+                .
+.S.u.b.C.A
+            X509v3 Authority Key Identifier: 
+                keyid:CE:0E:D9:97:07:9D:F5:75:F7:AF:C6:11:DF:9C:73:4E:10:1D:41:0B
+
+            X509v3 CRL Distribution Points: 
+
+                Full Name:
+                  URI:http://www.eme.lv/cdp/E-ME%20PSI%20(PCA).crl
+                  URI:ldap://eme.lv/cn=E-ME%20PSI%20(PCA),OU=Sertifikacijas%20pakalpojumu%20dala,O=E-ME,C=lv?certificaterevocationlist?base?objectclass=certificationauthority
+
+            Authority Information Access: 
+                CA Issuers - URI:http://www.eme.lv/aia/E-ME%20PSI%20(PCA).crt
+                OCSP - URI:http://ocsp.eme.lv/responder.eme
+                CA Issuers - URI:ldap://eme.lv/CN=E-ME%20PSI%20(PCA),OU=sertifikacijas%20pakalpojumu%20dala,O=E-ME,C=lv?cacertificate?base?objectclass=certificationauthority
+
+    Signature Algorithm: sha1WithRSAEncryption
+         0a:ae:97:12:c1:25:dd:e1:ff:35:ea:cc:8f:f7:a0:30:16:fe:
+         e4:aa:68:c6:59:48:aa:f5:6d:87:4b:de:f1:66:1d:8a:c5:86:
+         85:11:b3:49:ed:a8:c6:54:f7:a5:b6:32:20:09:2c:38:ab:fa:
+         cb:6b:ad:6a:95:a8:6d:4c:fc:60:8a:c8:2b:55:d7:64:87:d8:
+         f9:a3:0f:a6:0b:45:73:93:61:3a:fc:2c:71:88:17:10:fa:c5:
+         c1:81:2e:1c:a0:1e:c4:68:56:22:12:c3:bc:e9:2a:a6:d1:81:
+         6d:f3:e9:02:7a:44:b8:b0:76:64:89:52:62:72:fd:18:11:b4:
+         20:db:41:d8:fe:98:da:8d:0f:c8:ee:cd:d9:21:c8:0b:a3:22:
+         21:aa:42:c0:66:3e:12:31:8c:dd:17:83:0b:0c:c3:ad:ed:f1:
+         44:b5:67:0f:66:f9:4e:23:cc:f2:e3:d4:12:f3:78:44:10:c3:
+         2f:86:29:87:5e:42:56:43:6b:34:da:59:77:c4:0c:6c:34:40:
+         00:52:01:c4:01:4f:4c:9f:77:31:33:94:3a:04:b5:37:9c:dd:
+         bb:ef:bd:3e:2e:11:8b:6b:a3:98:d6:8b:e6:0d:4f:9d:0c:a8:
+         ec:08:9c:51:70:88:c1:dc:f3:02:0f:b7:86:43:bd:a9:a2:aa:
+         11:bb:21:b0
