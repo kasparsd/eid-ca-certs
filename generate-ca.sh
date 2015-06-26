@@ -1,27 +1,48 @@
 #!/bin/bash
-#
+
 cd "$(dirname "$0")"
 
-for f in original/*.crt; do
+# Download all CA certs
+OLDIFS=$IFS
+IFS=","
+while read name url
+do
+	echo "Downloading $name at $url"
+	curl -s "$url" > "certs/$name.crt"
+done < ca-urls.csv
+IFS=$OLDIFS
+
+# Convert each cert into standard PEM format
+for f in certs/*.crt
+do
 	filename=$(basename $f)
 
 	# Convert all certs to PEM
 	if openssl x509 -inform der -in $f -out pem/$(basename $f .crt).pem &> /dev/null ; then
-		echo "- $filename converted to PEM"
+		echo "$filename converted to PEM"
 	else
 		cp $f pem/$(basename $f .crt).pem
-		echo "- $filename already in PEM"
+		echo "$filename already in PEM"
 	fi
 
 	# Extract and store cert in text form
-	openssl x509 -in pem/$(basename $f .crt).pem -text -noout > meta/$(basename $f .crt).txt
+	openssl x509 -in pem/$(basename $f .crt).pem -text -noout > text/$(basename $f .crt).txt
 done
 
-# Generate a combined CA
-echo "# Generated on" `date` | cat - pem/root.pem pem/policy.pem pem/ca* > eid-ca.pem
+# Generate a combined CA for use in web servers
+cat pem/ca* pem/policy.pem pem/root.pem > eid-lv-server.pem
 
-# Generate a copy with a CRT extension
-cp eid-ca.pem eid-ca.crt
+# Generate a combined cert for client auth
+cat pem/ca* > eid-lv-client.pem
+
+# Generate a combined root and policy cert
+cat pem/policy.pem pem/root.pem > eid-lv-root.pem
+
+# Generate copies with a CRT extension
+for pem in eid-lv-*.pem
+do
+	cp $pem $(basename $pem .pem).crt
+done
 
 echo
-echo "Generated eid-ca.crt"
+echo "Completed!"

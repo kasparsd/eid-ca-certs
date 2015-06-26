@@ -1,0 +1,8 @@
+root,http://www.eme.lv/aia/E-ME%20SSI%20(RCA).crt
+policy,http://www.eme.lv/aia/E-ME%20PSI%20(PCA).crt
+ca1,http://www.eme.lv/aia/E-ME%20SI%20(CA1).crt
+ca2,https://www.eparaksts.lv/files/e-me_si_(ca1)(1).crt
+ca3,https://www.eparaksts.lv/files/eme_ica_ca3.crt
+ca4,https://www.eparaksts.lv/files/ca4.crt
+ca5,https://www.eparaksts.lv/files/ica4_2014-08-09.crt
+ca6,https://www.eparaksts.lv/files/ca5.crt
