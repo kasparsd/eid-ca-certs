@@ -6,6 +6,8 @@
 - [eid-lv-root.pem](https://raw.githubusercontent.com/kasparsd/eid-ca-certs/master/eid-lv-root.pem) is a combined CA policy and root certificate for browsers.
 - [eid-lv-client.pem](https://raw.githubusercontent.com/kasparsd/eid-ca-certs/master/eid-lv-client.pem) is a combined CA client certificate for browsers.
 
+## Usage:
+
 	$ ./generate-ca.sh 
 	- ca1.crt converted to PEM
 	- ca2.crt already in PEM
