@@ -12,6 +12,9 @@ for f in original/*.crt; do
 		cp $f pem/$(basename $f .crt).pem
 		echo "- $filename already in PEM"
 	fi
+
+	# Extract and store cert in text form
+	openssl x509 -in pem/$(basename $f .crt).pem -text -noout > meta/$(basename $f .crt).txt
 done
 
 # Generate a combined CA
