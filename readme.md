@@ -2,9 +2,9 @@
 
 `generate-ca.sh` is used to format [Latvian eID CA certificates](https://www.eparaksts.lv/lv/palidziba/lejupielades/pamata-sertifikati/) as PEM certificates and to create three combined certificates:
 
-- [eid-lv-server.pem](https://raw.githubusercontent.com/kasparsd/eid-ca-certs/master/eid-lv-server.pem) is a chained CA client, policy and root certificate for use in web servers.
 - [eid-lv-root.pem](https://raw.githubusercontent.com/kasparsd/eid-ca-certs/master/eid-lv-root.pem) is a combined CA policy and root certificate for browsers.
 - [eid-lv-client.pem](https://raw.githubusercontent.com/kasparsd/eid-ca-certs/master/eid-lv-client.pem) is a combined CA client certificate for browsers.
+- [eid-lv-server.pem](https://raw.githubusercontent.com/kasparsd/eid-ca-certs/master/eid-lv-server.pem) is a chained CA client, policy and root certificate for use in web servers.
 
 ## Usage:
 
