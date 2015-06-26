@@ -2,7 +2,10 @@
 
 `generate-ca.sh` downloads all [Latvian eID CA certificates](https://www.eparaksts.lv/lv/palidziba/lejupielades/pamata-sertifikati/), converts them to PEM format and generates a single chained CA client, policy and root certificate.
 
-Download: [eid-lv.crt](https://raw.githubusercontent.com/kasparsd/eid-ca-certs/master/eid-lv.crt)
+## Download
+
+[eid-lv.crt](https://raw.githubusercontent.com/kasparsd/eid-ca-certs/master/eid-lv.crt)
+
 
 ## Usage:
 
