@@ -33,14 +33,8 @@ do
 	openssl x509 -in "certs/$basename.pem" -text -noout > "certs/text/$basename.txt"
 done
 
-# Generate a combined CA for use in web servers
-cat certs/ca*.pem certs/policy.pem certs/root.pem > eid-lv-server.crt
-
-# Generate a combined cert for client auth
-cat certs/ca*.pem > eid-lv-client.crt
-
-# Generate a combined root and policy cert
-cat certs/policy.pem certs/root.pem > eid-lv-root.crt
+# Generate a combined CA cert
+cat certs/ca*.pem certs/policy.pem certs/root.pem > eid-lv.crt
 
 echo
 echo "Completed!"
