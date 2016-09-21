@@ -9,7 +9,7 @@
 
 ## Usage:
 
-	$ ./generate-ca.sh 
+	$ ./generate-ca.sh
 	Downloading root at http://www.eme.lv/aia/E-ME%20SSI%20(RCA).crt
 	Downloading policy at http://www.eme.lv/aia/E-ME%20PSI%20(PCA).crt
 	Downloading ca2 at https://www.eparaksts.lv/files/e-me_si_(ca1)(1).crt
@@ -17,11 +17,13 @@
 	Downloading ca4 at https://www.eparaksts.lv/files/ca4.crt
 	Downloading ca5 at https://www.eparaksts.lv/files/ica4_2014-08-09.crt
 	Downloading ca6 at https://www.eparaksts.lv/files/ca5.crt
+	Downloading ca7 at https://www.eparaksts.lv/files/ca1(7).crt
 	ca2.crt already in PEM
 	ca3.crt already in PEM
 	ca4.crt already in PEM
 	ca5.crt already in PEM
 	ca6.crt already in PEM
+	ca7.crt already in PEM
 	policy.crt converted to PEM
 	root.crt converted to PEM
 
